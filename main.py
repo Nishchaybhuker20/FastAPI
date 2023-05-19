@@ -3,9 +3,14 @@ from fastapi import FastAPI, Request, Header
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
+from .database import SessionLocal, engine
+from . import models
+
+models.Base.metadata.create_all(bind=engine)
+
 app = FastAPI()
 
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="sql_app/templates")
 
 @app.get("/index/", response_class=HTMLResponse)
 def index(request: Request, hx_request: Optional[str] = Header(None)): #hx-request
