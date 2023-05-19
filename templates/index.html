@@ -23,10 +23,11 @@
                 </tr>
             </thread>
             <tbody class = "text-center text-sm">
-                <tr>
-                    <td class = "border">Blade Runner</td>
-                    <td class = "border">Nishchay Bhuker </td>
-                </tr>
+                {% for film in films %}
+                <td class ="border">{{film.name}}</td>
+                <td class = "border">{{film.director}}</td>
+            </tr>
+                {% endfor %}
             </tbody>
         </table>
         <button class = "px-3 py-1 bg-blue-600 text-white ml-4">Load</button>
