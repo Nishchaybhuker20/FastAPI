@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creating FastAPI</title>
+
+    <script src = "https://unpkg.com/htmx.org@1.6.1"></script>
+    <script src = "https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
-    <p>Adding Functionality</p>
+    <div  class = "mx-4">
+
+    <p class="text-2xl font-bold mb-4">Movie List</p>
+        
+        <table class="min-w-[50%] mb-4">
+            <thread class="border-b text-lg">
+                <tr>
+                    <th class = "border">Film Name</th>
+                    <th class = "border">Director</th>
+                </tr>
+            </thread>
+            <tbody class = "text-center text-sm">
+                <tr>
+                    <td class = "border">Blade Runner</td>
+                    <td class = "border">Nishchay Bhuker </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class = "px-3 py-1 bg-blue-600 text-white ml-4">Load</button>
+    </div>
 </body>
 </html>
