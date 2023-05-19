@@ -24,11 +24,17 @@
             </thread>
             <tbody class = "text-center text-sm" id = "table-body">
                 {% include 'table.html' %}
+
             </tbody>
         </table>
+
         <button class = "px-3 py-1 bg-blue-600 text-white ml-4"
         hx-get="/index"
-        hx-target="#table-body">Load</button>
+        hx-target="#table-body"
+        hx-swap="beforeend">
+        Load</button>
+        
+
     </div>
 </body>
 </html>
